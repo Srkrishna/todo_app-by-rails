@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<center>
+  <div class="row">
+    <div class="col24s m12">
+      <div class="card blue-grey darken-1">
+         <div class="card-content white-text">
+
+            <p>
+              <strong>Activity:</strong>
+              <%= @todo_item.activity %>
+            </p>
+
+            <p>
+              <strong>Descrption:</strong>
+              <%= @todo_item.descrption %>
+            </p>
+
+            <p>
+              <strong>Status:</strong>
+              <%= @todo_item.status%>
+            </p>
+
+            <%= link_to 'Edit', edit_todo_item_path(@todo_item),class:"btn waves-effect  blue lighten-4" %> |
+            <%= link_to 'Back', todo_items_path,class:"btn waves-effect  blue lighten-4" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
