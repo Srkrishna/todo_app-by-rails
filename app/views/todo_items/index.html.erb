@@ -11,18 +11,18 @@
 
 <center>
 <p id="notice"><%= notice %></p>
-<h1>Todo Items</h1>
+<h2 style="color:white">Todo Items</h2>
 
 
 
 <form method="post" style="width:600px">
   <div class="row">
   <div class="col24s m12">
-    <div class="card  purple lighten-3">
+    <div class="ffffff">
            <div class="card-content white-text">
                 <table>
                   <thead>
-                      <tr style="color: black">
+                      <tr style="color: white">
                       <th>Activity</th>
                       <th>Descrption</th>
                       <th>Status</th>
@@ -33,20 +33,20 @@
 
                   <tbody>
                     <% @todo_items.each do |todo_item| %>
-                      <tr style="color: black">
-                        <td input type= "text"><%= todo_item.activity %></td>
-                        <td><%= todo_item.descrption %></td>
+                      <tr style="color: white">
+                        <td><%= todo_item.activity %></td>
+                        <td input type= "text"><%= todo_item.descrption %></td>
                         <td><%= todo_item.status %></td>
-                        <td><%= link_to 'Show', todo_item,class:"btn waves-effect  blue lighten-4" %></td>
-                        <td><%= link_to 'Edit', edit_todo_item_path(todo_item),class:"btn waves-effect  blue lighten-4" %></td>
-                        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' },class:"btn waves-effect  blue lighten-4" %></td>
+                        <td><%= link_to 'Show', todo_item,class:"waves-effect waves-light btn" %></td>
+                        <td><%= link_to 'Edit', edit_todo_item_path(todo_item),class:"waves-effect waves-light btn" %></td>
+                        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' },class:"waves-effect waves-light btn" %></td>
                       </tr>
                     <% end %>
                   </tbody>
                 </table>
 
                 <br>
-                <%=  link_to 'New Todo item', new_todo_item_path, class:"btn waves-effect  blue lighten-4" %>
+                <%=  link_to 'New Todo item', new_todo_item_path, class:"waves-effect waves-light btn" %>
             </div>
         </div>
       </div>
