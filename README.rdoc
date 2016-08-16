@@ -1,8 +1,16 @@
 A simple Todo app is developed with bootstrap and materialize in ruby on rails. 
 -> to run app just clone or download the repo.
+
 and then 
   
   cd todo_app-by-rails
   bundle install
   rails server (or) rails s
-  
+
+	In this app select "New Todo Item" to create a new item and fill the required 
+activity you need to do and there is checkbox for "status" to identify the task is completed 
+or not and it is based on the boolean operation.If you completed your task the click the
+checkbox and it show "true" else it shows"false".
+
+	And have a idea to make this web app better way by including the "datatables" and 
+"device"gems and if you people intersted in this give a try!!!!!

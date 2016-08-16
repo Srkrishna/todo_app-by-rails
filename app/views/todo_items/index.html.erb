@@ -9,47 +9,43 @@
   <script src="js/init.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
+
 <center>
 <p id="notice"><%= notice %></p>
-<h2 style="color:white">Todo Items</h2>
-
-
-
-<form method="post" style="width:600px">
-  <div class="row">
-  <div class="col24s m12">
-    <div class="ffffff">
-           <div class="card-content white-text">
-                <table>
-                  <thead>
-                      <tr style="color: white">
-                      <th>Activity</th>
-                      <th>Descrption</th>
-                      <th>Status</th>
-                      <th colspan="3"></th>
-                    </tr>
-
-                  </thead>
-
-                  <tbody>
-                    <% @todo_items.each do |todo_item| %>
-                      <tr style="color: white">
-                        <td><%= todo_item.activity %></td>
-                        <td input type= "text"><%= todo_item.descrption %></td>
-                        <td><%= todo_item.status %></td>
-                        <td><%= link_to 'Show', todo_item,class:"waves-effect waves-light btn" %></td>
-                        <td><%= link_to 'Edit', edit_todo_item_path(todo_item),class:"waves-effect waves-light btn" %></td>
-                        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' },class:"waves-effect waves-light btn" %></td>
+<h2 style="color:white">Todo App</h2>
+  <form method="post" style="width:600px">
+    <div class="row">
+    <div class="col24s m12">
+      <div class="ffffff">
+             <div class="card-content white-text">
+                  <table id="todo_items" class="display responsive no-wrap">
+                    <thead>
+                        <tr style="color: white">
+                        <th>Activity</th>
+                        <th>Descrption</th>
+                        <th>Status</th>
+                        <th colspan="3"></th>
                       </tr>
-                    <% end %>
-                  </tbody>
-                </table>
+                    </thead>
 
-                <br>
-                <%=  link_to 'New Todo item', new_todo_item_path, class:"waves-effect waves-light btn" %>
-            </div>
+                    <tbody>
+                      <% @todo_items.each do |todo_item| %>
+                        <tr style="color: white">
+                          <td><%= todo_item.activity %></td>
+                          <td input type= "text"><%= todo_item.descrption %></td>
+                          <td><%= todo_item.status%></td>
+                          <td><%= link_to 'Show', todo_item,class:"waves-effect waves-light btn" %></td>
+                          <td><%= link_to 'Edit', edit_todo_item_path(todo_item),class:"waves-effect waves-light btn" %></td>
+                          <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' },class:"waves-effect waves-light btn" %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                  <br>
+                  <%=  link_to 'New Todo item', new_todo_item_path, class:"waves-effect waves-light btn" %>
+              </div>
+          </div>
         </div>
-      </div>
-  </div>
-</form>
+    </div>
+  </form>
 </center>
