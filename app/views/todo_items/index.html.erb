@@ -18,11 +18,11 @@
 <form method="post" style="width:600px">
   <div class="row">
   <div class="col24s m12">
-    <div class="card blue-grey darken-1">
+    <div class="card  purple lighten-3">
            <div class="card-content white-text">
                 <table>
                   <thead>
-                      <tr>
+                      <tr style="color: black">
                       <th>Activity</th>
                       <th>Descrption</th>
                       <th>Status</th>
@@ -33,7 +33,7 @@
 
                   <tbody>
                     <% @todo_items.each do |todo_item| %>
-                      <tr>
+                      <tr style="color: black">
                         <td input type= "text"><%= todo_item.activity %></td>
                         <td><%= todo_item.descrption %></td>
                         <td><%= todo_item.status %></td>
